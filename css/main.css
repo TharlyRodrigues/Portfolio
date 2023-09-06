@@ -1,909 +1,917 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-p, label {
-    font-family: 'Open Sans', sans-serif;
+p,
+label {
+  font-family: "Open Sans", sans-serif;
 }
 
 @keyframes fadeOut {
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeFromLeft {
-    to {
-        left: 0;
-        opacity: 1;
-    }
+  to {
+    left: 0;
+    opacity: 1;
+  }
 }
 
-
 @keyframes slideTopIn {
-    to {
-        top: 15%;
-        opacity: 1;
-    }
+  to {
+    top: 15%;
+    opacity: 1;
+  }
 }
 
 @keyframes scaleRight {
-    to {
-        transform: scaleX(1)
-    }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes scaleUp {
-    to {
-        transform: scale(1)
-    }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes lineDown {
-    0% {
-        transform: scale(1, 0);
-        transform-origin: top center;
-    }
+  0% {
+    transform: scale(1, 0);
+    transform-origin: top center;
+  }
 
-    25% {
-        transform: scale(1, 1);
-        transform-origin: top center;
-    }
+  25% {
+    transform: scale(1, 1);
+    transform-origin: top center;
+  }
 
-    75% {
-        transform: scale(1, 1);
-        transform-origin: top center;
-    }
+  75% {
+    transform: scale(1, 1);
+    transform-origin: top center;
+  }
 
-    76% {
-        transform: scale(1, 1);
-        transform-origin: bottom center;
-    }
+  76% {
+    transform: scale(1, 1);
+    transform-origin: bottom center;
+  }
 
-    100% {
-        transform: scale(1, 0);
-        transform-origin: bottom center;
-    }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: bottom center;
+  }
 }
 
-@keyframes arrowDown{
-    0% {
-        bottom: 25px;
-    }
+@keyframes arrowDown {
+  0% {
+    bottom: 25px;
+  }
 
-    30% {
-        bottom: 15px;
-        opacity: 1;
-    }
+  30% {
+    bottom: 15px;
+    opacity: 1;
+  }
 
-    70% {
-        bottom: 10px;
-        opacity: 1;
-    }
+  70% {
+    bottom: 10px;
+    opacity: 1;
+  }
 
-    100% {
-        bottom: 5px;
-        opacity: 0;
-    }
+  100% {
+    bottom: 5px;
+    opacity: 0;
+  }
 }
 
-
-@media screen and (min-width: 320px){
-
-    .jl-page-wrapper, .jl-preloader {
-        width: 100%;
-        height: 100vh;
-        display: table;
-        background-color: #1C1C1C;
-        border: 30px solid #000;
-    }
-
-    .jl-preloader {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .jl-preloader-inner {
-        margin-top: -45px;
-    }
-
-    .jl-overlay {
-        width: 100%;
-        height: 100vh;
-        display: none;
-        position: fixed; 
-        z-index: 1000;
-        top: 0;
-        left: 0;
-        background-color: rgba(44, 203, 105, 0.95);
-    }
-
-    .jl-modal {
-        width: 800px;
-        display: none;
-        padding: 30px;
-        border-radius: 0 30px 30px 30px;
-        position: fixed;
-        top: -100%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        z-index: 1200;
-        opacity: 0;
-    }
-
-    .jl-modal-header, .jl-modal-body, .jl-form {
-        width: 100%;
-        display: table;
-        position: relative;
-    }
-
-    .jl-close-modal {
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        color: #2CCB69;
-        text-align: center;
-        line-height: center;
-        cursor: pointer;
-        position: absolute;
-        top: -15px;
-        right: -15px;
-        border: none;
-        background-color: #2f2f2f;
-    }
-
-    .jl-form label {
-        margin-bottom: 10px;
-        font-size: 16px;
-        display: inline-block;
-    }
-
-    .jl-field, .jl-textarea {
-        width: 100%;
-        background-color: #2f2f2f;
-        border-radius: 4px;
-        color: #fff;
-        border: none;
-        font-size: 16px;
-        text-indent: 15px;
-    }
-
-    .jl-field {
-        height: 45px;
-    }
-
-
-    .jl-topbar {
-        width: 100%;
-        height: 110px;
-        display: block;
-        background-color: transparent;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 900;
-    }
-
-    .jl-logo {
-        width: 74px;
-        height: 110px;
-        float: left;
-        margin-left: 60px;
-        background-color: #2CCB69;
-        border-radius: 0 0 37px 0;
-    }
-
-    .jl-logo img {
-        width: 46px;
-        height: 31px;
-        display: block;
-        margin: 55px auto 0 auto;
-    }
-
-    .jl-menu {
-        display: none;
-    }
-
-    .jl-btn-contact {
-        width: 45px;
-        height: 45px;
-        display: block;
-        background-color: #2CCB69;
-        background-image: url('../images/icon-contact-close.svg');
-        background-repeat: no-repeat;
-        position: fixed;
-        bottom: 45px;
-        right: 45px;
-        border-radius: 50%;
-        z-index: 200;
-        transition: all 0.2s ease-out;
-        border: none;
-        cursor: pointer;
-    }    
-
-    .jl-contact-info {
-        width: 245px;
-        height: 165px; 
-        padding: 25px;
-        position: fixed;
-        bottom: 115px; 
-        right: 65px;
-        z-index: 200;   
-        display: none;   
-    }
-
-    .jl-contact-info-inner {
-        display: table;
-        width: 100%;
-        float: right;
-    }
-
-    .jl-contact-info-inner p {
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    .jl-social-links {
-        width: 100%;
-        height: 45px;
-        display: block;
-        position: relative;
-        left: -12px;
-        margin-top: 7px;
-    }
-
-    .jl-social {
-        width: 45px;
-        height: 45px;
-        display: inline-block;
-    }
-
-    .jl-social > img {
-        width: 20px;
-        height: auto;
-        display: block;
-        margin: 13px auto 0;
-    }
-
-    .jl-corner {
-        width: 25px;
-        height: 25px;
-        display: block;
-        float: right;
-        display: relative;
-    }
-
-    .jl-corner:after {
-        content: '';
-        width: 25px;
-        height: 25px;
-        display: block;
-        position: absolute;
-        bottom: -23px;
-        right: 0;
-        background: transparent url('../images/corner.svg') no-repeat;
-    }
-
-    /*----HOME----*/
-
-    .jl-display-text {
-        margin-top: 10%;
-    }
-
-    #jl-home-presentation {
-        background-image: url('../images/joao-lemon-designer-home.png');
-        background-repeat: no-repeat;
-        background-position: 50% bottom;
-        position: relative;
-    }
-
-    .jl-scroll-down {
-        width: 70px;
-        height: 105px;
-        border-radius: 35px 35px 0 0;
-        background-color: #2CCB69;
-        display: block;        
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        z-index: 100;
-    }
-
-    .jl-arrow-down {
-        width: 100%;
-        height: 75px;
-        display: table;
-        margin-top: 30px;
-        position: relative;
-    }
-
-    .jl-arrow-down img {
-        width: 16px;
-        height: 10px;
-        display: block;        
-        position: absolute;
-        bottom: 25px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        opacity: 0;
-        animation: arrowDown 1.5s linear 1.5s infinite;
-    }
-
-    .jl-arrow-down:before {
-        content: '';
-        width: 2px;
-        height: 45px;
-        display: block;        
-        position: absolute;
-        bottom: 25px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        background-color: #000;
-        animation: lineDown 1.5s ease-out infinite;
-        transform-origin: top center;
-    }
-
-     /*----HOME - PORTFOLIO ----*/
-
-     .jl-portfolio-navigator {
-         width: 145px;
-         height: 400px;
-         display: table;
-         position: absolute;
-         left: 15px;
-         top: 26vh;
-     }
-
-     .jl-navigator-counter {
-         width: 100%;
-         height: 90px;
-         display: block;
-         margin-bottom: 60px;
-         position: relative;
-     }
-
-     .jl-navigator-counter:before {
-         content: '';
-         display: block;
-         width: 35px;
-         height: 100%;
-         background-color: #1c1c1c;
-         position: absolute;
-         top: 3px;
-         left: 0;
-     }
-
-     .jl-navigator-counter span {
-         font-family: 'Open Sans', sans-serif;
-         font-size: 120px;
-         line-height: 90px;
-         font-weight: 600;
-     }
-
-     .jl-item-navigator {
-         width: 100%;
-         display: table;
-     }
-
-     .jl-item-navigator a {
-         width: 20px;
-         height: 1px;
-         display: block;
-         margin: 0 0 80px 35px;
-         background-color: #4D4C4C;
-     }
-
-     .jl-item-navigator a.jl-item-active {
-        background-color: #2CCB69;
-     }
-
-     .jl-item-navigator a:last-child {
-         margin-bottom: 30px;
-     }
-
-     .jl-items-next-prev {
-         width: 100%;
-         height: 45px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         background-color: #2C2C2C;
-         border-radius: 23px;
-     }
-
-     .jl-items-next-prev > div {
-         height: 32px;
-     }
-
-     .jl-items-counter {
-         font-family: 'Open Sans', sans-serif;
-         color: #4D4C4C;
-         line-height: 32px;         
-     }
-
-     .jl-item-prev, .jl-item-next {
-         width: 45px;
-         color: #2CCB69;
-         text-align: center;
-         cursor: pointer;
-     }
-
-     .jl-items-counter span:nth-child(1){
-        color: #bcbcbc;
-     }
-
-     .jl-items-counter span:nth-child(2){
-        color: #4D4C4C;
-     }
-
-    ion-icon {
-        font-size: 32px;
-    }
-
-    .jl-slider-container {
-        display: block;
-        overflow: hidden;
-    }
-
-    .jl-slider-list {
-        width: auto;
-        height: 700px;
-        display: block;
-        list-style: none;
-    }
-
-    .jl-slider-list  .jl-portfolio-item {
-        display: block;
-        height: 500px;
-        float: left;
-        margin-top: calc(26vh - 75px);
-    }
-    
-    .jl-portfolio-list  .jl-portfolio-item {
-        margin-bottom: 100px;
-    }
-
-    .jl-slider-list  .jl-portfolio-item-info{
-       width: calc(100% - 75px);
-       display: table;
-       margin-top: 73px;
-       position: relative;
-       opacity: 0;
-       left: -75px;
-   }
-
-   .jl-portfolio-list  .jl-portfolio-item-info{
-        width: calc(100% - 105px);
-   }
-
-   .jl-portfolio-list {
-       list-style: none;
-   }
-
-   .jl-slider-list  .jl-portfolio-item-thumb,  .jl-portfolio-list  .jl-portfolio-item-thumb{
-       width: 100%;
-       display: table;
-       padding: 75px 0 19px 0;
-       position: relative;
-   }
-
-   .jl-slider-list .jl-portfolio-item-thumb > button, .jl-portfolio-list .jl-portfolio-item-thumb > button {
-        margin-top: 17px;
-        margin-right: 75px;
-        float: right;
-   }
-
-   .jl-slider-list  .jl-portfolio-item-box{
-       width: 100%;
-       height: 100%;
-       display: block;
-       background-color: #2C2C2C;
-       position: absolute;
-       top: 0;
-       left: 0;
-       transform: scaleX(0);
-       transform-origin: right;
-   }
-
-   .jl-portfolio-list  .jl-portfolio-item-box{
-        width: 100%;
-        height: 100%;
-        display: block;
-        background-color: #2C2C2C;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-   .jl-slider-list  .jl-portfolio-item-thumb img   {
-       width: 100%;
-       max-width: 100%;
-       height: auto;
-       position: relative;
-       left: -75px;
-       transform: scale(0)
-   }
-
-   .jl-portfolio-list  .jl-portfolio-item-thumb img   {
-       width: 100%;
-       max-width: 100%;
-       height: auto;
-       position: relative;
-       left: -75px;
-   }
-
-    /*----PORTFOLIO----*/
-    .jl-section-offset-top {
-        margin-top: 130px;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info{
-        text-align: right;
-        margin-top: 70px;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
-        float: right;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
-        margin-left: 105px;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row {
-        flex-direction: row-reverse;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button{
-        float: left;
-        margin-left: 75px;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img{
-        left: 75px;
-    }
-
-
-
-
+@media screen and (min-width: 320px) {
+  .jl-page-wrapper,
+  .jl-preloader {
+    width: 100%;
+    height: 100vh;
+    display: table;
+    background-color: #1c1c1c;
+    border: 30px solid #000;
+  }
+
+  .jl-preloader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .jl-preloader-inner {
+    margin-top: -45px;
+  }
+
+  .jl-overlay {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(44, 203, 105, 0.95);
+  }
+
+  .jl-modal {
+    width: 800px;
+    display: none;
+    padding: 30px;
+    border-radius: 0 30px 30px 30px;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1200;
+    opacity: 0;
+  }
+
+  .jl-modal-header,
+  .jl-modal-body,
+  .jl-form {
+    width: 100%;
+    display: table;
+    position: relative;
+  }
+
+  .jl-close-modal {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #2ccb69;
+    text-align: center;
+    line-height: center;
+    cursor: pointer;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border: none;
+    background-color: #2f2f2f;
+  }
+
+  .jl-form label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .jl-field,
+  .jl-textarea {
+    width: 100%;
+    background-color: #2f2f2f;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-indent: 15px;
+  }
+
+  .jl-field {
+    height: 45px;
+  }
+
+  .jl-topbar {
+    width: 100%;
+    height: 110px;
+    display: block;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+  }
+
+  .jl-logo {
+    width: 74px;
+    height: 110px;
+    float: left;
+    margin-left: 60px;
+    background-color: #2ccb69;
+    border-radius: 0 0 37px 0;
+  }
+
+  .jl-logo img {
+    width: 46px;
+    height: 31px;
+    display: block;
+    margin: 55px auto 0 auto;
+  }
+
+  .jl-menu {
+    display: none;
+  }
+
+  .jl-btn-contact {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-color: #2ccb69;
+    background-image: url("../images/icon-contact-close.svg");
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    border-radius: 50%;
+    z-index: 200;
+    transition: all 0.2s ease-out;
+    border: none;
+    cursor: pointer;
+  }
+
+  .jl-contact-info {
+    width: 245px;
+    height: 165px;
+    padding: 25px;
+    position: fixed;
+    bottom: 115px;
+    right: 65px;
+    z-index: 200;
+    display: none;
+  }
+
+  .jl-contact-info-inner {
+    display: table;
+    width: 100%;
+    float: right;
+  }
+
+  .jl-contact-info-inner p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .jl-social-links {
+    width: 100%;
+    height: 45px;
+    display: block;
+    position: relative;
+    left: -12px;
+    margin-top: 7px;
+  }
+
+  .jl-social {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+  }
+
+  .jl-social > img {
+    width: 20px;
+    height: auto;
+    display: block;
+    margin: 13px auto 0;
+  }
+
+  .jl-corner {
+    width: 25px;
+    height: 25px;
+    display: block;
+    float: right;
+    display: relative;
+  }
+
+  .jl-corner:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    bottom: -23px;
+    right: 0;
+    background: transparent url("../images/corner.svg") no-repeat;
+  }
+
+  /*----HOME----*/
+
+  .jl-display-text {
+    margin-top: 10%;
+  }
+
+  #jl-home-presentation {
+    background-image: url("../images/joao-lemon-designer-home.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    position: relative;
+  }
+
+  .jl-scroll-down {
+    width: 70px;
+    height: 105px;
+    border-radius: 35px 35px 0 0;
+    background-color: #2ccb69;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 100;
+  }
+
+  .jl-arrow-down {
+    width: 100%;
+    height: 75px;
+    display: table;
+    margin-top: 30px;
+    position: relative;
+  }
+
+  .jl-arrow-down img {
+    width: 16px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    animation: arrowDown 1.5s linear 1.5s infinite;
+  }
+
+  .jl-arrow-down:before {
+    content: "";
+    width: 2px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #000;
+    animation: lineDown 1.5s ease-out infinite;
+    transform-origin: top center;
+  }
+
+  /*----HOME - PORTFOLIO ----*/
+
+  .jl-portfolio-navigator {
+    width: 145px;
+    height: 400px;
+    display: table;
+    position: absolute;
+    left: 15px;
+    top: 26vh;
+  }
+
+  .jl-navigator-counter {
+    width: 100%;
+    height: 90px;
+    display: block;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  .jl-navigator-counter:before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 100%;
+    background-color: #1c1c1c;
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+
+  .jl-navigator-counter span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 120px;
+    line-height: 90px;
+    font-weight: 600;
+  }
+
+  .jl-item-navigator {
+    width: 100%;
+    display: table;
+  }
+
+  .jl-item-navigator a {
+    width: 20px;
+    height: 1px;
+    display: block;
+    margin: 0 0 80px 35px;
+    background-color: #4d4c4c;
+  }
+
+  .jl-item-navigator a.jl-item-active {
+    background-color: #2ccb69;
+  }
+
+  .jl-item-navigator a:last-child {
+    margin-bottom: 30px;
+  }
+
+  .jl-items-next-prev {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2c2c;
+    border-radius: 23px;
+  }
+
+  .jl-items-next-prev > div {
+    height: 32px;
+  }
+
+  .jl-items-counter {
+    font-family: "Open Sans", sans-serif;
+    color: #4d4c4c;
+    line-height: 32px;
+  }
+
+  .jl-item-prev,
+  .jl-item-next {
+    width: 45px;
+    color: #2ccb69;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .jl-items-counter span:nth-child(1) {
+    color: #bcbcbc;
+  }
+
+  .jl-items-counter span:nth-child(2) {
+    color: #4d4c4c;
+  }
+
+  ion-icon {
+    font-size: 32px;
+  }
+
+  .jl-slider-container {
+    display: block;
+    overflow: hidden;
+  }
+
+  .jl-slider-list {
+    width: auto;
+    height: 700px;
+    display: block;
+    list-style: none;
+  }
+
+  .jl-slider-list .jl-portfolio-item {
+    display: block;
+    height: 500px;
+    float: left;
+    margin-top: calc(26vh - 75px);
+  }
+
+  .jl-portfolio-list .jl-portfolio-item {
+    margin-bottom: 100px;
+  }
+
+  .jl-slider-list .jl-portfolio-item-info {
+    width: calc(100% - 75px);
+    display: table;
+    margin-top: 73px;
+    position: relative;
+    opacity: 0;
+    left: -75px;
+  }
+
+  .jl-portfolio-list .jl-portfolio-item-info {
+    width: calc(100% - 105px);
+  }
+
+  .jl-portfolio-list {
+    list-style: none;
+  }
+
+  .jl-slider-list .jl-portfolio-item-thumb,
+  .jl-portfolio-list .jl-portfolio-item-thumb {
+    width: 100%;
+    display: table;
+    padding: 75px 0 19px 0;
+    position: relative;
+  }
+
+  .jl-slider-list .jl-portfolio-item-thumb > button,
+  .jl-portfolio-list .jl-portfolio-item-thumb > button {
+    margin-top: 17px;
+    margin-right: 75px;
+    float: right;
+  }
+
+  .jl-slider-list .jl-portfolio-item-box {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #2c2c2c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  .jl-portfolio-list .jl-portfolio-item-box {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #2c2c2c;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .jl-slider-list .jl-portfolio-item-thumb img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: -75px;
+    transform: scale(0);
+  }
+
+  .jl-portfolio-list .jl-portfolio-item-thumb img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: -75px;
+  }
+
+  /*----PORTFOLIO----*/
+  .jl-section-offset-top {
+    margin-top: 130px;
+  }
+
+  .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info {
+    text-align: right;
+    margin-top: 70px;
+  }
+
+  .jl-portfolio-list
+    .jl-portfolio-item:nth-child(odd)
+    .jl-portfolio-item-info
+    button {
+    float: right;
+  }
+
+  .jl-portfolio-list
+    .jl-portfolio-item:nth-child(even)
+    .jl-portfolio-item-info {
+    margin-left: 105px;
+  }
+
+  .jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row {
+    flex-direction: row-reverse;
+  }
+
+  .jl-portfolio-list
+    .jl-portfolio-item:nth-child(even)
+    .jl-portfolio-item-thumb
+    button {
+    float: left;
+    margin-left: 75px;
+  }
+
+  .jl-portfolio-list
+    .jl-portfolio-item:nth-child(even)
+    .jl-portfolio-item-thumb
+    img {
+    left: 75px;
+  }
 }
 
-@media screen and (min-width: 576px){
-    
+@media screen and (min-width: 576px) {
 }
 
-@media screen and (min-width: 768px){
-    
+@media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 992px){
-    .jl-menu {        
-        display: table;
-        float: left;
-        height: 110px;
-        margin-left: 30px;
-    }
+@media screen and (min-width: 992px) {
+  .jl-menu {
+    display: table;
+    float: left;
+    height: 110px;
+    margin-left: 30px;
+  }
 
-    .jl-menu a {
-        font-family: 'Open Sans';
-        font-size: 16px;
-        color: #bcbcbc;
-        text-decoration: none;
-        text-transform: lowercase;
-        display: inline-block;
-        margin: 50px 20px 0 20px;
-        font-weight: 400;
-        position: relative;
-    }
+  .jl-menu a {
+    font-family: "Open Sans";
+    font-size: 16px;
+    color: #bcbcbc;
+    text-decoration: none;
+    text-transform: lowercase;
+    display: inline-block;
+    margin: 50px 20px 0 20px;
+    font-weight: 400;
+    position: relative;
+  }
 
-    .jl-menu a:first-child {
-        margin-left: 0;
-    }
+  .jl-menu a:first-child {
+    margin-left: 0;
+  }
 
-    .jl-menu a:hover {
-        color: #2CCB69;
-    }
+  .jl-menu a:hover {
+    color: #2ccb69;
+  }
 
-    .jl-menu a:before {
-        content: '';
-        width: 100%;
-        height: 4px;
-        background-color: #2CCB69;
-        display: block;
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        transition: all 0.2s ease-out;   
-        transform: scale(0, 1);  
-        transform-origin: center left;
-    }
+  .jl-menu a:before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #2ccb69;
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transition: all 0.2s ease-out;
+    transform: scale(0, 1);
+    transform-origin: center left;
+  }
 
-    .jl-menu a:hover:before{
-        transform: scale(1, 1);  
-    }
-
+  .jl-menu a:hover:before {
+    transform: scale(1, 1);
+  }
 }
 
-@media screen and (min-width: 1200px){
-    
+@media screen and (min-width: 1200px) {
 }
 
-@media screen and (min-width: 1364px){
-    
+@media screen and (min-width: 1364px) {
 }
 
-@media screen and (min-width: 1600px){
-    
+@media screen and (min-width: 1600px) {
 }
 
 /* BOTÕES */
 
 .jl-btn {
-    display: table; 
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    border: none;
-    transition: all 0.2s ease-out;
-    text-transform: lowercase;
-    position: relative;
+  display: table;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s ease-out;
+  text-transform: lowercase;
+  position: relative;
 }
 
 .jl-btn ion-icon {
-    font-size: 21px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 2px;
-    margin-top: -3px;
+  font-size: 21px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-top: -3px;
 }
 
 .jl-btn-block {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .jl-btn-small {
-    height: 28px;
-    line-height: 28px;
-    padding: 0 20px;
-    border-radius: 14px;
-    font-size: 11px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px;
+  border-radius: 14px;
+  font-size: 11px;
 }
 
 .jl-btn-medium {
-    height: 38px;
-    line-height: 38px;
-    padding: 0 27px;
-    border-radius: 19px;
-    font-size: 14px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 27px;
+  border-radius: 19px;
+  font-size: 14px;
 }
 
 .jl-btn-large {
-    height: 45px;
-    line-height: 45px;
-    padding: 0 35px;
-    border-radius: 23px;
-    font-size: 16px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 35px;
+  border-radius: 23px;
+  font-size: 16px;
 }
 
 .jl-btn-green {
-    background-color: #2CCB69;
-    color: #1C1C1C;
+  background-color: #2ccb69;
+  color: #1c1c1c;
 }
 
 .jl-btn-green:hover {
-    background-color: rgb(6, 135, 55);
-    color: #fff;
+  background-color: rgb(6, 135, 55);
+  color: #fff;
 }
 
 .jl-btn-dark {
-    background-color: #151515;
-    color: #2CCB69;
+  background-color: #151515;
+  color: #2ccb69;
 }
 
 .jl-btn-dark:hover {
-    background-color: #2f2f2f;
-    color: #fff;
+  background-color: #2f2f2f;
+  color: #fff;
 }
 
 /* CLASSES UTILITARIAS */
 
 .jl-title {
-    font-family: 'Abril Fatface', serif;
-    font-weight: normal;
+  font-family: "Abril Fatface", serif;
+  font-weight: normal;
+}
+
+.jl-subtitle {
+  font-family: "Open Sans", serif;
+  font-weight: 800;
 }
 
 .jl-title-large {
-    font-size: 64px;
+  font-size: 64px;
 }
 
 .jl-title-xlarge {
-    font-size: 120px;
+  font-size: 120px;
 }
 
 .jl-text-green {
-    color: #2CCB69;
+  color: #2ccb69;
 }
 
 .jl-text-dark {
-    color: #4D4C4C;
+  color: #4d4c4c;
 }
 
 .jl-text-light {
-    color: #bcbcbc;
+  color: #bcbcbc;
 }
 
 .jl-text-black {
-    color: #000;
+  color: #000;
 }
 
 .jl-bg-green {
-    background-color: #2CCB69;
+  background-color: #2ccb69;
 }
 
 .jl-bg-dark {
-    background-color: #4D4C4C;
+  background-color: #4d4c4c;
 }
 
 .jl-bg-light {
-    background-color: #bcbcbc;
+  background-color: #bcbcbc;
 }
 
 .jl-bg-black {
-    background-color: #000;
+  background-color: #000;
 }
 
 .jl-mar-15 {
-    margin: 15px;
+  margin: 15px;
 }
 .jl-mar-top-15 {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 .jl-mar-right-15 {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 .jl-mar-bottom-15 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .jl-mar-left-15 {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 .jl-pad-15 {
-    padding: 15px;
+  padding: 15px;
 }
 .jl-pad-top-15 {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 .jl-pad-right-15 {
-    padding-right: 15px;
+  padding-right: 15px;
 }
 .jl-pad-bottom-15 {
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 .jl-pad-left-15 {
-    padding-left: 15px;
+  padding-left: 15px;
 }
-
 
 .jl-mar-30 {
-    margin: 30px;
+  margin: 30px;
 }
 .jl-mar-top-30 {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 .jl-mar-right-30 {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 .jl-mar-bottom-30 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .jl-mar-left-30 {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .jl-pad-30 {
-    padding: 30px;
+  padding: 30px;
 }
 .jl-pad-top-30 {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 .jl-pad-right-30 {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 .jl-pad-bottom-30 {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 .jl-pad-left-30 {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .jl-full-height {
-    height: 100vh;
-    position: relative;
+  height: 100vh;
+  position: relative;
 }
 
 .jl-first-section {
-    height: calc(100vh - 30px);
+  height: calc(100vh - 30px);
 }
 
 .jl-no-padding {
-    padding: 0 !important;
+  padding: 0 !important;
 }
-
 
 /* CLASSES COMPORTAMENTO */
 
 .jl-is-open {
-    display: block;
+  display: block;
 }
 
 .jl-slide-top-in {
-    animation: slideTopIn 0.6s forwards cubic-bezier(0,1.11,.6,.89);
+  animation: slideTopIn 0.6s forwards cubic-bezier(0, 1.11, 0.6, 0.89);
 }
 
 .jl-change-icon {
-    background-position-y: -45px;
+  background-position-y: -45px;
 }
 
-.jl-fade-out{
-    animation: fadeOut 2s forwards ease-out;
+.jl-fade-out {
+  animation: fadeOut 2s forwards ease-out;
 }
 
-.jl-fade-from-left{
-    animation: fadeFromLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
+.jl-fade-from-left {
+  animation: fadeFromLeft 2s 0.7s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
 
 .jl-scale-right {
-    animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0,1.01,.32,1);
+  animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
 
 .jl-scale-up {
-    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0,1.01,.32,1);
+  animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
 
 .jl-no-radius-left {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .jl-no-radius-right {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .red {
-    background: red;
+  background: red;
 }
 
 .green {
-    background: green;
+  background: green;
 }
 
 .yellow {
-    background: yellow;
+  background: yellow;
 }
 
 .purple {
-    background: purple;
+  background: purple;
 }
 
 .blue {
-    background: blue;
+  background: blue;
 }
