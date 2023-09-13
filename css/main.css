@@ -265,6 +265,9 @@ label {
     left: -12px;
     margin-top: 7px;
   }
+  .jl-social-links-circle {
+    left: 0;
+  }
 
   .jl-social,
   .jl-social-links-circle .jl-social {
@@ -275,6 +278,20 @@ label {
 
   .jl-social-links-circle .jl-social {
     border-radius: 50%;
+    text-align: center;
+    transition: all 0.2s ease-out;
+  }
+
+  .jl-social-links-circle .jl-social ion-icon {
+    height: 45px;
+    transition: all 0.2s ease-out;
+  }
+  .jl-social-links-circle .jl-social:hover {
+    color: #2ccb69;
+  }
+
+  .jl-social-links-circle .jl-social:hover {
+    background-color: #000;
   }
 
   .jl-social > img {
