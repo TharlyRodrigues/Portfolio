@@ -622,6 +622,48 @@ label {
     position: relative;
     left: -15px;
   }
+
+  /* ------detalhes------- */
+  .jl-hero {
+    height: 500px;
+    background-image: url("../pages/portfolio/img/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+  }
+
+  .jl-hero-inner {
+    height: 500px;
+  }
+
+  .jl-hero-inner-content {
+    position: relative;
+  }
+  .jl-hero-inner-content::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: block;
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    box-sizing: content-box;
+    padding: 30px;
+  }
+
+  .jl-hero h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  .jl-project-stats {
+    width: 100%;
+    height: 100%;
+    display: table;
+    border-right: 1px solid #2ccb69;
+  }
 }
 
 @media screen and (min-width: 576px) {
