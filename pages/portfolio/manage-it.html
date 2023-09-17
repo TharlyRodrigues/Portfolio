@@ -17,7 +17,7 @@
 <body>
     <div class="jl-preloader">
         <div class="jl-preloader-inner">
-            <img src="../images/lemon-loader.svg" class="jl-mar-bottom-15" />
+            <img src="../../images/lemon-loader.svg" class="jl-mar-bottom-15" />
             <p class="jl-text-light jl-mar-top-15">Aguarde um pouquinho … Estou preparando a limonada</p>
         </div>
     </div>
@@ -95,14 +95,28 @@
         </section>
 
         <main class="jl-post container">
-            <section>
+            <section class="jl-post-section">
                 <div class="row">
-                    <div class="col-sm-8 offset-2 jl-text-center jl-text-light">
-                        <h1 class="jl-title jl-title-medium jl-text-green">O desafio</h1>
+                    <div class="col-sm-8 offset-2 jl-text-center jl-text-light jl-mar-bottom-15" data-aos-offset="300 " data-aos="fade-up">
+                        <h2 class="jl-title jl-title-medium jl-text-green jl-mar-bottom-15">O desafio</h2>
                         <p>O maior problema a ser resolvido era <span class="jl-text-green">demonstrar ao usuário somente as prioridades</span> de acordo com seu dia-a-dia. Nulla vulputate, ex in tincidunt consequat, dui metus luctus purus,
                              ut dapibus quam augue sit amet leo. Phasellus sit amet purus in elit efficitur viverra.</p>
                         <p> Nulla vulputate, ex in tincidunt consequat, dui metus luctus purus, ut dapibus quam augue sit amet leo. Phasellus sit amet purus in elit efficitur viverra. </p>
-    
+                    </div>
+
+                    <div class="col-sm-12 jl-mar-bottom-30 rellax" data-rellax-speed="2" data-aos-offset="300 " data-aos="fade-up">
+                        <img src="img/processo-1.png" alt="processo parte 1" title="manage it - processo parte 1" class="jl-img-responsive">
+                    </div>
+
+                    <div class="col-sm-6 jl-text-light jl-mar-top-30 rellax" data-rellax-speed="1" data-aos-offset="30" data-aos="fade-right">
+                        <h2 class="jl-title jl-title-medium jl-text-green jl-mar-bottom-15 jl-mar-top-15">Gerando Ideias</h2>
+                        <p>O maior problema a ser resolvido era <span class="jl-text-green">demonstrar ao usuário somente as prioridades</span> de acordo com seu dia-a-dia. Nulla vulputate, ex in tincidunt consequat, dui metus luctus purus,
+                             ut dapibus quam augue sit amet leo. Phasellus sit amet purus in elit efficitur viverra.</p>
+                        <p> Nulla vulputate, ex in tincidunt consequat, dui metus luctus purus, ut dapibus quam augue sit amet leo.
+                         Phasellus sit amet purus in elit efficitur viverra. </p>
+                    </div>
+                    <div class="col-sm-6 jl-mar-top-30 rellax" data-rellax-speed="-1" data-aos-offset="300" data-aos="fade-left">
+                        <img src="img/processo-2.png" alt="manage it" class="jl-img-responsive">
                     </div>
                 </div>
             </section>    
@@ -113,10 +127,12 @@
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
     <script src="../../js/main.js"></script>
 
     <script>
         AOS.init();
+        var rellax = new Rellax('.rellax');
     </script>
 
 </body>

@@ -667,6 +667,12 @@ label {
   .jl-post p {
     margin-bottom: 30px;
   }
+
+  .jl-post-section {
+    height: 100%;
+    display: table;
+    padding: 45px 0;
+  }
 }
 
 @media screen and (min-width: 576px) {
