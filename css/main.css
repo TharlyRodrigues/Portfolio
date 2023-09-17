@@ -654,7 +654,6 @@ label {
   }
 
   .jl-hero h1 {
-    font-size: 48px;
     margin-bottom: 50px;
   }
 
@@ -663,6 +662,10 @@ label {
     height: 100%;
     display: table;
     border-right: 1px solid #2ccb69;
+  }
+
+  .jl-post p {
+    margin-bottom: 30px;
   }
 }
 
@@ -810,6 +813,9 @@ label {
   font-weight: 800;
 }
 
+.jl-title-medium {
+  font-size: 48px;
+}
 .jl-title-large {
   font-size: 64px;
 }
@@ -832,6 +838,10 @@ label {
 
 .jl-text-black {
   color: #000;
+}
+
+.jl-text-center {
+  text-align: center;
 }
 
 .jl-bg-green {
