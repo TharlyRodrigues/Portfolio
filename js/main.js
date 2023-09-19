@@ -19,6 +19,7 @@ btnContact.addEventListener("click", function () {
   this.classList.toggle("jl-change-icon");
 });
 
+
 //Abrindo e Fechando o Modal de Orcamento
 for (var i = 0; i < toggleModal.length; i++) {
   toggleModal[i].addEventListener("click", function () {
@@ -31,9 +32,10 @@ for (var i = 0; i < toggleModal.length; i++) {
   });
 }
 
-var postGallery = document.querySelector(".jl-post-gallery");
+var postGallery = document.querySelector('.jl-post-gallery');
 var postGalleryHeight = postGallery.clientHeight;
-postGallery.style.height = postGalleryHeight - 270 + "px";
+postGallery.style.height = (postGalleryHeight - 270) + 'px';
+
 
 // Animando Elementos on Scroll com Waypoints
 var myScrollDown = document.querySelector(".jl-scroll-down");
