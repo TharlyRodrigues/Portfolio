@@ -9,7 +9,7 @@ const getImageSrc = function () {
             var imageSrc = this.getAttribute("data-src");
             frameImage.setAttribute("src", imageSrc);
 
-            overlay.classList.toggle("jl-is-open");
+            overlay.classList.add("jl-is-open");
             frameContainer.classList.toggle("jl-is-open");
         });
     }
