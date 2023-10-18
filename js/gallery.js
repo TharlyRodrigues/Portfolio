@@ -1,10 +1,23 @@
-var overlay = document.querySelector('.jl-overlay');
+var overlay = document.querySelector(".jl-overlay");
 var frameImage = document.querySelector(".jl-gallery-frame-image");
 var frameContainer = document.querySelector(".jl-gallery-frame-container");
 var galleryImages = document.querySelectorAll(".jl-thumb-img");
 var closeGallery = document.querySelectorAll(".jl-toggle-gallery");
-var btnNext = document.querySelector('.jl-item-next');
-var btnPrev = document.querySelector('.jl-item-prev');
+var btnNext = document.querySelector(".jl-item-next");
+var btnPrev = document.querySelector(".jl-item-prev");
+var currCounter = document.querySelector(".jl-current-slide");
+var totalCounter = document.querySelector(".jl-total-slide");
+
+//Counter Formater
+var counterFormatter = function (n) {
+    if (n < 10) {
+        return '0' + n;
+    } else {
+        return n;
+    }
+}
+
+totalCounter.innerHTML = counterFormatter(galleryImages.length);
 
 const getImageSrc = () => {
     for (var i = 0; i < galleryImages.length; i++) {
@@ -15,9 +28,12 @@ const getImageSrc = () => {
             frameImage.setAttribute("data-index", itemNum);
             overlay.classList.add("jl-is-open");
             frameContainer.classList.toggle("jl-is-open");
+
+            currCounter.innerHTML = counterFormatter(itemNum);
+
         });
     }
-}
+};
 getImageSrc();
 
 for (var c = 0; c < closeGallery.length; c++) {
@@ -39,25 +55,27 @@ const nextItem = function (currItemNum) {
         // Faça o loop e identifique qual item faz match com o número do próximo item
         for (var n = 0; n < galleryImages.length; n++) {
             var item = galleryImages[n];
-            var itemNum = parseInt(item.getAttribute('data-item'));
+            var itemNum = parseInt(item.getAttribute("data-item"));
 
             if (itemNum === nextItemNum) {
                 // Capturamos o data-src e o data-index
-                var nextSrc = item.getAttribute('data-src');
-                var nextIndex = item.getAttribute('data-item');
+                var nextSrc = item.getAttribute("data-src");
+                var nextIndex = item.getAttribute("data-item");
 
                 // Passamos o data-src para a tag img no frame
-                frameImage.setAttribute('src', nextSrc);
-                frameImage.setAttribute('data-index', nextIndex);
+                frameImage.setAttribute("src", nextSrc);
+                frameImage.setAttribute("data-index", nextIndex);
+
+                currCounter.innerHTML = counterFormatter(nextIndex);
             }
         }
     }
-}
+};
 
-btnNext.addEventListener('click', function () {
-    var currItemNum = frameImage.getAttribute('data-index');
+btnNext.addEventListener("click", function () {
+    var currItemNum = frameImage.getAttribute("data-index");
     nextItem(currItemNum);
-})
+});
 
 const prevItem = function (currItemNum) {
     // Converte currItemNum para um número inteiro
@@ -71,22 +89,24 @@ const prevItem = function (currItemNum) {
         // Faça o loop e identifique qual item faz match com o número do item anterior
         for (var p = 0; p < galleryImages.length; p++) {
             var item = galleryImages[p];
-            var itemNum = parseInt(item.getAttribute('data-item'));
+            var itemNum = parseInt(item.getAttribute("data-item"));
 
             if (itemNum === prevItemNum) {
                 // Capturamos o data-src e o data-index
-                var prevSrc = item.getAttribute('data-src');
-                var prevIndex = item.getAttribute('data-item');
+                var prevSrc = item.getAttribute("data-src");
+                var prevIndex = item.getAttribute("data-item");
 
                 // Passamos o data-src para a tag img no frame
-                frameImage.setAttribute('src', prevSrc);
-                frameImage.setAttribute('data-index', prevIndex);
+                frameImage.setAttribute("src", prevSrc);
+                frameImage.setAttribute("data-index", prevIndex);
+
+                currCounter.innerHTML = counterFormatter(prevIndex);
             }
         }
     }
-}
+};
 
-btnPrev.addEventListener('click', function () {
-    var currItemNum = frameImage.getAttribute('data-index');
+btnPrev.addEventListener("click", function () {
+    var currItemNum = frameImage.getAttribute("data-index");
     prevItem(currItemNum);
-})
+});
