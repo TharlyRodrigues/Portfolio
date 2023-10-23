@@ -743,7 +743,7 @@ label {
     height: 100%;
     position: absolute;
     top: 3%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
