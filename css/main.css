@@ -387,7 +387,7 @@ label {
     background-repeat: no-repeat;
     background-position: 50% bottom;
     position: relative;
-    background-size: 100% auto;
+    background-size: 110% auto;
   }
 
   .jl-home-presentation h1 {
@@ -860,9 +860,20 @@ label {
   .jl-title-xlarge {
     font-size: 90px;
   }
+
+  .jl-home-presentation .jl-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 700px) {
+  .jl-home-presentation {
+    background-size: 80%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -934,6 +945,10 @@ label {
 
   .jl-home-presentation p {
     text-align: left;
+  }
+
+  .jl-home-presentation .jl-btn {
+    margin-left: 0;
   }
 }
 
