@@ -452,12 +452,13 @@ label {
   /*----HOME - PORTFOLIO ----*/
 
   .jl-portfolio-navigator {
-    width: 145px;
-    height: 400px;
+    width: 68%;
+    height: auto;
     display: table;
     position: absolute;
     left: 15px;
-    top: 26vh;
+    bottom: 15px;
+    z-index: 900;
   }
 
   .jl-navigator-counter {
@@ -511,7 +512,7 @@ label {
     width: 100%;
     height: 45px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: #2c2c2c;
     border-radius: 23px;
@@ -550,18 +551,18 @@ label {
   .jl-slider-container {
     display: block;
     overflow: hidden;
+    padding-bottom: 120px;
   }
 
   .jl-slider-list {
     width: auto;
-    height: 700px;
     display: block;
     list-style: none;
   }
 
   .jl-slider-list .jl-portfolio-item {
     display: block;
-    height: 500px;
+    height: auto;
     float: left;
     margin-top: 0;
   }
@@ -886,6 +887,11 @@ label {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .jl-full-height {
+    height: auto;
+    position: relative;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -979,6 +985,17 @@ label {
     margin-left: 0;
   }
 
+  .jl-portfolio-navigator {
+    width: 145px;
+    height: 400px;
+    left: 15px;
+    top: 26vh;
+  }
+
+  .jl-slider-container {
+    padding-bottom: 0;
+  }
+
   .jl-slider-list .jl-portfolio-item-thumb {
     padding: 30px 0 19px 0;
     margin-top: 45px;
@@ -1003,6 +1020,10 @@ label {
     width: 30px;
   }
 
+  .jl-items-next-prev {
+    justify-content: center;
+  }
+
   .jl-title-large,
   .jl-slider-list .jl-portfolio-item-info p {
     text-align: left;
@@ -1022,6 +1043,10 @@ label {
 
   .jl-slider-list .jl-portfolio-item-info button {
     margin: 0;
+  }
+  /* -----utilitárias----*/
+  .jl-full-height {
+    height: 100vh;
   }
 }
 
@@ -1244,11 +1269,6 @@ label {
 }
 .jl-pad-left-30 {
   padding-left: 30px;
-}
-
-.jl-full-height {
-  height: 100vh;
-  position: relative;
 }
 
 .jl-first-section {
