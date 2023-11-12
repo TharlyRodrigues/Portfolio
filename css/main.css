@@ -563,7 +563,7 @@ label {
     display: block;
     height: 500px;
     float: left;
-    margin-top: calc(26vh - 75px);
+    margin-top: 0;
   }
 
   .jl-portfolio-list .jl-portfolio-item {
@@ -573,7 +573,7 @@ label {
   .jl-slider-list .jl-portfolio-item-info {
     width: 100%;
     display: table;
-    margin-top: 73px;
+    margin-top: 15px;
     position: relative;
     opacity: 0;
   }
@@ -594,7 +594,12 @@ label {
     list-style: none;
   }
 
-  .jl-slider-list .jl-portfolio-item-thumb,
+  .jl-slider-list .jl-portfolio-item-thumb {
+    width: 100%;
+    display: table;
+    padding: 30px 0 19px 0;
+    position: relative;
+  }
   .jl-portfolio-list .jl-portfolio-item-thumb {
     width: 100%;
     display: table;
@@ -976,6 +981,7 @@ label {
 
   .jl-slider-list .jl-portfolio-item-thumb {
     padding: 30px 0 19px 0;
+    margin-top: 45px;
   }
 
   .jl-slider-list .jl-portfolio-item-thumb img {
@@ -1002,9 +1008,16 @@ label {
     text-align: left;
   }
 
+  .jl-slider-list .jl-portfolio-item {
+    display: block;
+    height: 500px;
+    float: left;
+    margin-top: calc(26vh - 75px);
+  }
   .jl-slider-list .jl-portfolio-item-info {
     width: calc(100% - 75px);
     left: -75px;
+    margin-top: 73px;
   }
 
   .jl-slider-list .jl-portfolio-item-info button {
