@@ -571,16 +571,23 @@ label {
   }
 
   .jl-slider-list .jl-portfolio-item-info {
-    width: calc(100% - 75px);
+    width: 100%;
     display: table;
     margin-top: 73px;
     position: relative;
     opacity: 0;
-    left: -75px;
   }
 
   .jl-portfolio-list .jl-portfolio-item-info {
     width: calc(100% - 105px);
+  }
+
+  .jl-slider-list .jl-portfolio-item-info p {
+    text-align: center;
+  }
+
+  .jl-slider-list .jl-portfolio-item-info button {
+    margin: 0 auto;
   }
 
   .jl-portfolio-list {
@@ -862,7 +869,8 @@ label {
   }
 
   .jl-title-large {
-    font-size: 48px;
+    font-size: 60px;
+    text-align: center;
   }
 
   .jl-home-presentation .jl-btn {
@@ -876,11 +884,18 @@ label {
 
 @media screen and (min-width: 700px) {
   .jl-home-presentation {
-    background-size: 80%;
+    background-size: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .jl-home-presentation {
+    background-size: 80%;
+  }
+
+  .jl-title-large {
+    font-size: 48px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -976,6 +991,20 @@ label {
   .jl-navigator-counter:before {
     width: 30px;
   }
+
+  .jl-title-large,
+  .jl-slider-list .jl-portfolio-item-info p {
+    text-align: left;
+  }
+
+  .jl-slider-list .jl-portfolio-item-info {
+    width: calc(100% - 75px);
+    left: -75px;
+  }
+
+  .jl-slider-list .jl-portfolio-item-info button {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -985,6 +1014,7 @@ label {
 
   .jl-slider-list .jl-portfolio-item-thumb {
     padding: 75px 0 19px 0;
+    margin-top: 0;
   }
 
   .jl-slider-list .jl-portfolio-item-thumb img {
