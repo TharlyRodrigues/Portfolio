@@ -9,6 +9,12 @@ var currCounter = document.querySelector(".jl-current-slide");
 var totalCounter = document.querySelector(".jl-total-slide");
 var skeletonLoading = document.querySelector(".jl-skeleton-loading");
 
+document.addEventListener("DOMContentLoaded", function () {
+  var postGallery = document.querySelector(".jl-post-gallery");
+  var postGalleryHeight = postGallery.clientHeight;
+  postGallery.style.height = postGalleryHeight - 270 + "px";
+});
+
 //Counter Formater
 var counterFormatter = function (n) {
   if (n < 10) {
