@@ -719,7 +719,6 @@ label {
 
   /* ------detalhes------- */
   .jl-hero {
-    height: 500px;
     background-image: url("../pages/portfolio/img/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -728,23 +727,16 @@ label {
   }
 
   .jl-hero-inner {
-    height: 500px;
+    display: table;
+    padding: 65px 0;
   }
 
   .jl-hero-inner-content {
-    position: relative;
-  }
-  .jl-hero-inner-content::before {
-    content: "";
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     display: block;
-    position: absolute;
-    left: -30px;
-    top: -30px;
-    box-sizing: content-box;
-    padding: 30px;
+    padding: 15px 25px 15px;
   }
 
   .jl-hero h1 {
@@ -755,7 +747,14 @@ label {
     width: 100%;
     height: 100%;
     display: table;
-    border-right: 1px solid #2ccb69;
+    border-right: none;
+  }
+
+  .jl-project-description {
+    width: 100%;
+    height: 100%;
+    display: table;
+    margin-top: 30px;
   }
 
   .jl-post {
@@ -906,6 +905,9 @@ label {
 }
 
 @media screen and (min-width: 576px) {
+  .jl-hero-inner-content {
+    padding: 55px 65px 65px;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -1134,6 +1136,15 @@ label {
   .jl-slider-list .jl-portfolio-item-info button {
     margin: 0;
   }
+
+  .jl-project-description {
+    margin-top: 0;
+  }
+
+  .jl-project-stats {
+    border-right: 1px solid #2ccb69;
+  }
+
   /* -----utilitárias----*/
   .jl-full-height {
     height: 100vh;
@@ -1221,7 +1232,7 @@ label {
 .jl-btn-medium {
   height: 38px;
   line-height: 38px;
-  padding: 0 27px;
+  padding: 0 20px;
   border-radius: 19px;
   font-size: 14px;
 }
