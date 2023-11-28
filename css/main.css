@@ -732,6 +732,15 @@ label {
     height: 100%;
   }
 
+  .jl-titulo-sobre,
+  .jl-info-sobre,
+  .jl-premios-sobre {
+    width: 100%;
+    display: table;
+    float: left;
+    margin-bottom: 30px;
+  }
+
   /* ------detalhes------- */
   .jl-hero {
     background-image: url("../pages/portfolio/img/hero.png");
@@ -1195,6 +1204,22 @@ label {
   .jl-full-height {
     height: 100vh;
   }
+
+  /* pg sobre */
+  .jl-titulo-sobre {
+    width: 100%;
+  }
+
+  .jl-titulo-sobre h1 {
+    font-size: 90px;
+  }
+  .jl-info-sobre {
+    width: 55%;
+  }
+  .jl-premios-sobre {
+    width: 45%;
+    padding-left: 30px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1236,11 +1261,23 @@ label {
   .jl-gallery-frame-container {
     width: 340px;
   }
+
+  .jl-titulo-sobre h1 {
+    font-size: 120px;
+  }
 }
 
 @media screen and (min-width: 1364px) {
 }
 
+@media screen and (min-width: 1500px) {
+  .jl-info-sobre {
+    width: 38%;
+  }
+  .jl-premios-sobre {
+    width: 31%;
+  }
+}
 @media screen and (min-width: 1600px) {
 }
 
