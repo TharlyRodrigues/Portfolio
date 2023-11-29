@@ -719,11 +719,12 @@ label {
 
   .jl-avatar-sobre {
     position: relative;
+    height: 430px;
   }
 
   .jl-box-img {
     position: absolute;
-    left: -15px;
+    left: 0;
     bottom: 0;
   }
 
@@ -936,6 +937,15 @@ label {
 @media screen and (min-width: 360px) {
   .jl-gallery-frame-container {
     width: 70%;
+  }
+}
+@media screen and (min-width: 400px) {
+  .jl-avatar-sobre {
+    height: 500px;
+  }
+
+  .jl-box-img {
+    width: 390px;
   }
 }
 
@@ -1206,6 +1216,9 @@ label {
   }
 
   /* pg sobre */
+  .jl-avatar-sobre {
+    height: 750px;
+  }
   .jl-titulo-sobre {
     width: 100%;
   }
@@ -1220,8 +1233,12 @@ label {
     width: 45%;
     padding-left: 30px;
   }
-}
 
+  .jl-box-img {
+    width: 100%;
+    display: table;
+  }
+}
 @media screen and (min-width: 1200px) {
   .jl-modal {
     width: 800px;
@@ -1279,6 +1296,9 @@ label {
   }
 }
 @media screen and (min-width: 1600px) {
+  .jl-avatar-sobre {
+    height: 100%;
+  }
 }
 
 /* BOTÕES */
@@ -1473,11 +1493,6 @@ label {
 
 .jl-no-padding {
   padding: 0 !important;
-}
-
-.jl-box-img {
-  width: 100%;
-  display: table;
 }
 
 .jl-img-responsive {
