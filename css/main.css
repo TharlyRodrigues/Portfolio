@@ -6,6 +6,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 p,
 label {
   font-family: "Open Sans", sans-serif;
