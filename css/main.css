@@ -143,6 +143,59 @@ label {
   top: 130px;
 }
 
+.border-top-left,
+.border-bottom-right {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: fixed;
+  z-index: 800;
+  background-color: #000;
+}
+.border-top-left {
+  top: 0;
+  left: 0;
+}
+
+.border-top-left:before,
+.border-top-left:after {
+  content: "";
+  width: 30px;
+  height: 100vh;
+  display: block;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.border-top-left:after {
+  width: 100vw;
+  height: 30px;
+}
+
+.border-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.border-bottom-right:before,
+.border-bottom-right:after {
+  content: "";
+  width: 30px;
+  height: 100vh;
+  display: block;
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.border-bottom-right:after {
+  width: 100vw;
+  height: 30px;
+}
+
 @media screen and (min-width: 320px) {
   .jl-page-wrapper,
   .jl-preloader {
