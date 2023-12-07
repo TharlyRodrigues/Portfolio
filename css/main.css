@@ -124,6 +124,15 @@ label {
   }
 }
 
+@keyframes logoBig {
+  from {
+    top: -28px;
+  }
+  to {
+    top: 0;
+  }
+}
+
 .jl-trigger-topbar {
   width: 1px;
   height: 1px;
@@ -262,6 +271,9 @@ label {
     position: relative;
   }
 
+  .jl-logo-big {
+    animation: logoBig 0.2s ease-out forwards;
+  }
   .jl-logo-shorten {
     animation: logoShorten 0.2s ease-out forwards;
   }
