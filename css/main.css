@@ -1049,6 +1049,23 @@ label {
     top: 14px;
   }
 
+  /*--------------404----------------  */
+  .jl-404 h1,
+  .jl-404 p {
+    text-align: center;
+  }
+
+  .jl-404 .jl-btn {
+    margin: 15px auto;
+  }
+
+  .jl-404 img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
   .jl-title-xlarge {
     font-size: 90px;
   }
@@ -1100,6 +1117,11 @@ label {
   .jl-gallery-frame-image {
     border-radius: 14px;
     top: 40px;
+  }
+
+  /*--------------404----------------  */
+  .jl-404 img {
+    width: 80%;
   }
 }
 
@@ -1390,6 +1412,24 @@ label {
   .jl-gallery-frame-container {
     width: 20%;
   }
+
+  /*--------------404----------------  */
+  .jl-404 h1,
+  .jl-404 p {
+    text-align: left;
+  }
+
+  .jl-404 p {
+    margin-top: 40px;
+  }
+
+  .jl-404 .jl-btn {
+    margin-left: 0;
+  }
+
+  .jl-404 img {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1030px) {
@@ -1483,6 +1523,7 @@ label {
   transition: all 0.2s ease-out;
   text-transform: lowercase;
   position: relative;
+  text-decoration: none;
 }
 
 .jl-btn ion-icon {
