@@ -706,7 +706,7 @@ label {
     text-align: center;
   }
 
-  .jl-slider-list .jl-portfolio-item-info button {
+  .jl-slider-list .jl-portfolio-item-info .jl-btn {
     margin: 0 auto;
   }
 
@@ -727,12 +727,12 @@ label {
     position: relative;
   }
 
-  .jl-slider-list .jl-portfolio-item-thumb > button {
+  .jl-slider-list .jl-portfolio-item-thumb > .jl-btn {
     margin: 17px auto 0 auto;
     float: none;
   }
 
-  .jl-portfolio-list .jl-portfolio-item-thumb > button {
+  .jl-portfolio-list .jl-portfolio-item-thumb > .jl-btn {
     margin: 17px auto 0 auto;
     float: none;
   }
@@ -787,11 +787,11 @@ label {
   .jl-portfolio-list
     .jl-portfolio-item:nth-child(odd)
     .jl-portfolio-item-info
-    button,
+    .jl-btn,
   .jl-portfolio-list
     .jl-portfolio-item:nth-child(even)
     .jl-portfolio-item-info
-    button {
+    .jl-btn {
     float: none;
     margin: 0 auto;
   }
@@ -1251,7 +1251,7 @@ label {
     left: -105px;
   }
 
-  .jl-slider-list .jl-portfolio-item-thumb > button {
+  .jl-slider-list .jl-portfolio-item-thumb > .jl-btn {
     margin: 17px 6.5% 0 0;
     float: right;
   }
@@ -1268,7 +1268,7 @@ label {
   .jl-portfolio-list
     .jl-portfolio-item:nth-child(odd)
     .jl-portfolio-item-info
-    button {
+    .jl-btn {
     float: right;
   }
 
@@ -1310,14 +1310,14 @@ label {
   .jl-portfolio-list
     .jl-portfolio-item:nth-child(even)
     .jl-portfolio-item-thumb
-    button {
+    .jl-btn {
     float: left;
     margin-left: 75px;
   }
   .jl-portfolio-list
     .jl-portfolio-item:nth-child(odd)
     .jl-portfolio-item-thumb
-    button {
+    .jl-btn {
     float: right;
     margin-right: 75px;
   }
@@ -1331,7 +1331,7 @@ label {
   .jl-portfolio-list
     .jl-portfolio-item:nth-child(even)
     .jl-portfolio-item-info
-    button {
+    .jl-btn {
     float: left;
   }
 
@@ -1364,7 +1364,7 @@ label {
     margin-top: 73px;
   }
 
-  .jl-slider-list .jl-portfolio-item-info button {
+  .jl-slider-list .jl-portfolio-item-info .jl-btn {
     margin: 0;
   }
 
@@ -1468,7 +1468,7 @@ label {
     left: -75px;
   }
 
-  .jl-slider-list .jl-portfolio-item-thumb > button {
+  .jl-slider-list .jl-portfolio-item-thumb > .jl-btn {
     margin-right: 75px;
   }
 
